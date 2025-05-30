@@ -88,7 +88,8 @@ def vote(request, question_id):
 
 ## COURSERA GRADE
 
-![Screenshot 2025-05-28 142358](https://github.com/user-attachments/assets/0fe53938-b115-49f0-baaa-87a1e806295e)
+![Screenshot 2025-05-30 083600](https://github.com/user-attachments/assets/c3d12949-6555-4bdd-b6ea-6b615db497f3)
+
 
 
 ## RESULT
