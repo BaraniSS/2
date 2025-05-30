@@ -1,5 +1,5 @@
 # Ex02 Django Polls
-## Date: 28/05/2025
+## Date: 28.05.25
 
 ## AIM
 To develop a Django application to implement polls.
@@ -21,22 +21,6 @@ Execute Django admin and create details for polls.
 
 ## PROGRAM
 ```
-urls.py
-from django.urls import path
-
-from . import views
-
-app_name = 'polls'
-urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
-    path('owner/', views.owner, name='owner'),
-    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
-    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
-    path('<int:question_id>/vote/', views.vote, name='vote'),
-]
-```
-```
-views.py
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
@@ -93,15 +77,19 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 ```
+
+
+
 ## OUTPUT
-![Screenshot 2025-05-29 220836](https://github.com/user-attachments/assets/59f75f67-6615-4070-bcd0-854fd6fbe939)                                 
-![Screenshot 2025-05-29 220856](https://github.com/user-attachments/assets/72611b54-d4af-453b-9998-7af5497814bd)
-![Screenshot 2025-05-29 220923](https://github.com/user-attachments/assets/b5a02b6b-6e13-49e6-bc70-e89d02050ac5)
+![Screenshot 2025-05-28 143116](https://github.com/user-attachments/assets/ff3b51e4-bd06-42b1-adfb-1d36e09182c4)
+![Screenshot 2025-05-28 143128](https://github.com/user-attachments/assets/04f7f189-7f05-4ae5-a104-739b7a5202cb)
 
 
 
 ## COURSERA GRADE
-![Screenshot 2025-05-29 220953](https://github.com/user-attachments/assets/92c7e014-c3c7-4e00-9859-6652c3f09e68)
+
+![Screenshot 2025-05-28 142358](https://github.com/user-attachments/assets/0fe53938-b115-49f0-baaa-87a1e806295e)
+
 
 ## RESULT
 Thus the program for creating a polls using Django has been executed successfully.
